@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Bot, Eye, MessageCircle, Gamepad2, Briefcase, Brain, Star } from 'lucide-react';
 
 const CourseCard = ({ course }) => {
   const {
@@ -27,13 +28,12 @@ const CourseCard = ({ course }) => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">
-                {tags.includes('AI') ? '🤖' : 
-                 tags.includes('Computer Vision') ? '👁️' : 
-                 tags.includes('NLP') ? '💬' : 
-                 tags.includes('Robotics') ? '🦾' : 
-                 tags.includes('Business') ? '💼' : '🧠'}
-              </span>
+              {tags.includes('GenAI') || tags.includes('AI') ? <Bot className="w-8 h-8 text-white" /> :
+               tags.includes('Computer Vision') ? <Eye className="w-8 h-8 text-white" /> :
+               tags.includes('NLP') ? <MessageCircle className="w-8 h-8 text-white" /> :
+               tags.includes('Unity') || tags.includes('Game Development') ? <Gamepad2 className="w-8 h-8 text-white" /> :
+               tags.includes('Business') ? <Briefcase className="w-8 h-8 text-white" /> :
+               <Brain className="w-8 h-8 text-white" />}
             </div>
             <div className="text-sm opacity-80">Interactive Learning</div>
           </div>
@@ -92,11 +92,12 @@ const CourseCard = ({ course }) => {
             <div className="flex items-center">
               {isLaunched ? (
                 <>
-                  <div className="flex text-yellow-400 mr-1">
+                  <div className="flex mr-1">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className={`text-sm ${i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'}`}>
-                        ⭐
-                      </span>
+                      <Star 
+                        key={i} 
+                        className={`w-3 h-3 ${i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                      />
                     ))}
                   </div>
                   <span className="font-medium text-neutral-dark text-sm">{rating}</span>

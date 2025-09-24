@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 // Pages
 import HomePage from './pages/HomePage';
 import CoursesPage from './pages/CoursesPage';
+import HackathonPage from './pages/HackathonPage';
 import TeamPage from './pages/TeamPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/courses" element={<CoursesPage />} />
+            <Route path="/hackathon" element={<HackathonPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />

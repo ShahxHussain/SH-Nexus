@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
+import { Mail, Phone, MapPin, MessageCircle, Linkedin, Twitter, Instagram, Youtube, Github } from 'lucide-react';
 
 const ContactPage = () => {
   const contactMethods = [

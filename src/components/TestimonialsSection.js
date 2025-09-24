@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { GraduationCap, Briefcase, Star, Users } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -27,10 +28,10 @@ const TestimonialsSection = () => {
   ];
 
   const achievements = [
-    { number: '500+', label: 'Graduates Placed', icon: '🎓' },
-    { number: '95%', label: 'Job Placement Rate', icon: '💼' },
-    { number: '4.9/5', label: 'Average Rating', icon: '⭐' },
-    { number: '50+', label: 'Industry Partners', icon: '🤝' }
+    { number: '500+', label: 'Graduates Placed', icon: GraduationCap },
+    { number: '95%', label: 'Job Placement Rate', icon: Briefcase },
+    { number: '4.9/5', label: 'Average Rating', icon: Star },
+    { number: '50+', label: 'Industry Partners', icon: Users }
   ];
 
   return (
@@ -58,7 +59,9 @@ const TestimonialsSection = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-4xl mb-4">{achievement.icon}</div>
+                <div className="mb-4">
+                  <achievement.icon className="w-10 h-10 text-primary-600 mx-auto" />
+                </div>
                 <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                   {achievement.number}
                 </div>
@@ -96,7 +99,7 @@ const TestimonialsSection = () => {
                 {/* Rating */}
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">⭐</span>
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
 

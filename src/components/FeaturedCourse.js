@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { MapPin, Calendar, Clock, User, Star } from 'lucide-react';
 
 const FeaturedCourse = () => {
   const featuredCourse = {
@@ -98,15 +99,15 @@ const FeaturedCourse = () => {
                 <div className="bg-gray-50 rounded-lg p-4 mb-6">
                   <div className="grid grid-cols-1 gap-2 text-sm">
                     <div className="flex items-center">
-                      <span className="text-gray-500 mr-2">📍</span>
+                      <MapPin className="w-4 h-4 text-gray-500 mr-2" />
                       <span className="font-medium">{featuredCourse.format}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-gray-500 mr-2">🗓️</span>
+                      <Calendar className="w-4 h-4 text-gray-500 mr-2" />
                       <span className="font-medium">{featuredCourse.schedule}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-gray-500 mr-2">⏰</span>
+                      <Clock className="w-4 h-4 text-gray-500 mr-2" />
                       <span className="font-medium">Course Duration: {featuredCourse.duration}</span>
                     </div>
                   </div>
@@ -114,7 +115,10 @@ const FeaturedCourse = () => {
 
                 {/* Instructor Info */}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-neutral-dark mb-2">👨‍🏫 INSTRUCTOR</h4>
+                  <h4 className="font-semibold text-neutral-dark mb-2 flex items-center">
+                    <User className="w-4 h-4 mr-2" />
+                    INSTRUCTOR
+                  </h4>
                   <div className="bg-primary-50 rounded-lg p-4">
                     <h5 className="font-bold text-primary-700">{featuredCourse.instructor}</h5>
                     <p className="text-primary-600 text-sm mb-2">{featuredCourse.instructorTitle}</p>
@@ -159,11 +163,12 @@ const FeaturedCourse = () => {
 
                 {/* Rating */}
                 <div className="flex items-center mb-6">
-                  <div className="flex text-yellow-400 mr-2">
+                  <div className="flex mr-2">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className={i < Math.floor(featuredCourse.rating) ? 'text-yellow-400' : 'text-gray-300'}>
-                        ⭐
-                      </span>
+                      <Star 
+                        key={i} 
+                        className={`w-4 h-4 ${i < Math.floor(featuredCourse.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                      />
                     ))}
                   </div>
                   <span className="font-semibold text-neutral-dark mr-2">{featuredCourse.rating}</span>

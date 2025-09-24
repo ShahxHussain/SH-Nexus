@@ -1,25 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Rocket, Target, Globe, Lightbulb } from 'lucide-react';
 
 const IntroSection = () => {
   const features = [
     {
-      icon: '🚀',
+      icon: Rocket,
       title: 'Innovation First',
       description: 'Cutting-edge AI curriculum designed for the future of technology.'
     },
     {
-      icon: '🎯',
+      icon: Target,
       title: 'Personalized Learning',
       description: 'Adaptive learning paths tailored to your unique goals and pace.'
     },
     {
-      icon: '🌐',
+      icon: Globe,
       title: 'Global Community',
       description: 'Connect with learners and experts from around the world.'
     },
     {
-      icon: '💡',
+      icon: Lightbulb,
       title: 'Practical Skills',
       description: 'Hands-on projects and real-world applications of AI concepts.'
     }
@@ -56,8 +57,8 @@ const IntroSection = () => {
               whileHover={{ y: -5 }}
               className="card p-8 text-center group"
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {feature.icon}
+              <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-12 h-12 text-primary-600 mx-auto" />
               </div>
               <h3 className="text-xl font-semibold text-neutral-dark mb-3">
                 {feature.title}
