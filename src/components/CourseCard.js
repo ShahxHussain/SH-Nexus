@@ -20,22 +20,48 @@ const CourseCard = ({ course }) => {
 
   return (
     <motion.div
-      whileHover={{ y: -5 }}
-      className="card overflow-hidden h-full flex flex-col"
+      initial={{ opacity: 0, y: 30, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      whileHover={{ 
+        y: -10, 
+        scale: 1.02,
+        transition: { duration: 0.3 }
+      }}
+      className="card-premium overflow-hidden h-full flex flex-col glow-effect"
     >
       {/* Course Image */}
-      <div className="relative h-48 bg-gradient-primary">
+      <div className="relative h-48 bg-gradient-primary overflow-hidden">
+        <motion.div 
+          animate={{ 
+            backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] 
+          }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+          className="absolute inset-0 bg-gradient-to-br from-accent-blue/20 via-transparent to-accent-purple/20"
+        />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-              {tags.includes('GenAI') || tags.includes('AI') ? <Bot className="w-8 h-8 text-white" /> :
-               tags.includes('Computer Vision') ? <Eye className="w-8 h-8 text-white" /> :
-               tags.includes('NLP') ? <MessageCircle className="w-8 h-8 text-white" /> :
-               tags.includes('Unity') || tags.includes('Game Development') ? <Gamepad2 className="w-8 h-8 text-white" /> :
-               tags.includes('Business') ? <Briefcase className="w-8 h-8 text-white" /> :
-               <Brain className="w-8 h-8 text-white" />}
-            </div>
-            <div className="text-sm opacity-80">Interactive Learning</div>
+            <motion.div 
+              whileHover={{ 
+                scale: 1.2, 
+                rotate: 360,
+                transition: { duration: 0.6 }
+              }}
+              className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:shadow-2xl group-hover:shadow-white/20 transition-all duration-500"
+            >
+              {tags.includes('GenAI') || tags.includes('AI') ? <Bot className="w-10 h-10 text-white" /> :
+               tags.includes('Computer Vision') ? <Eye className="w-10 h-10 text-white" /> :
+               tags.includes('NLP') ? <MessageCircle className="w-10 h-10 text-white" /> :
+               tags.includes('Unity') || tags.includes('Game Development') ? <Gamepad2 className="w-10 h-10 text-white" /> :
+               tags.includes('Business') ? <Briefcase className="w-10 h-10 text-white" /> :
+               <Brain className="w-10 h-10 text-white" />}
+            </motion.div>
+            <div className="text-sm opacity-90 font-medium">Interactive Learning</div>
           </div>
         </div>
         

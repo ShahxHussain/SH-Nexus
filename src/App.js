@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 // Components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -34,6 +35,7 @@ function App() {
           </Routes>
         </motion.main>
         <Footer />
+        <ScrollToTop />
       </div>
     </Router>
   );

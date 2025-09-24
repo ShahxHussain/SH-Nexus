@@ -26,21 +26,28 @@ const Header = () => {
 
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-white/90 backdrop-blur-xl shadow-2xl shadow-primary-500/10 border-b border-white/20' 
+          : 'bg-transparent'
       }`}
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <motion.div 
+              whileHover={{ rotate: 360, scale: 1.1 }}
+              transition={{ duration: 0.6 }}
+              className="relative w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:shadow-primary-500/50 transition-all duration-500"
+            >
               <span className="text-white font-bold text-xl">SH</span>
-            </div>
-            <span className="text-2xl font-bold gradient-text">Nexus</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/20 to-accent-purple/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </motion.div>
+            <span className="text-2xl font-bold gradient-text-static group-hover:scale-105 transition-transform duration-300">Nexus</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -64,7 +71,13 @@ const Header = () => {
                 )}
               </Link>
             ))}
-            <button className="btn-primary">Get Started</button>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-primary"
+            >
+              Get Started
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}

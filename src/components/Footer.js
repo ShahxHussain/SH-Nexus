@@ -23,8 +23,36 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-secondary text-white">
-      <div className="container mx-auto px-6 py-12">
+    <footer className="relative bg-gradient-secondary text-white overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <motion.div 
+          animate={{ 
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{ 
+            duration: 20, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+          className="absolute top-10 right-10 w-64 h-64 bg-white/5 rounded-full blur-3xl"
+        />
+        <motion.div 
+          animate={{ 
+            x: [0, -80, 0],
+            y: [0, 60, 0],
+          }}
+          transition={{ 
+            duration: 25, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 5
+          }}
+          className="absolute bottom-10 left-10 w-48 h-48 bg-accent-blue/10 rounded-full blur-2xl"
+        />
+      </div>
+      <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
@@ -38,13 +66,20 @@ const Footer = () => {
               Empowering the next generation through innovative AI education and hybrid learning methodologies.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
                   href={social.url}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ 
+                    scale: 1.2, 
+                    rotate: 360,
+                    transition: { duration: 0.3 }
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-white/30 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 group"
                   aria-label={social.name}
                 >
                   <SocialIcon icon={social.icon} />

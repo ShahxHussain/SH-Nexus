@@ -53,19 +53,42 @@ const TestimonialsSection = () => {
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.2,
+                  ease: "easeOut"
+                }}
                 viewport={{ once: true }}
-                className="text-center"
+                whileHover={{ 
+                  scale: 1.1,
+                  y: -5,
+                  transition: { duration: 0.3 }
+                }}
+                className="text-center group"
               >
-                <div className="mb-4">
-                  <achievement.icon className="w-10 h-10 text-primary-600 mx-auto" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
+                <motion.div 
+                  className="mb-6"
+                  whileHover={{ 
+                    rotate: 360,
+                    transition: { duration: 0.6 }
+                  }}
+                >
+                  <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 transition-all duration-500">
+                    <achievement.icon className="w-10 h-10 text-white" />
+                  </div>
+                </motion.div>
+                <motion.div 
+                  className="text-4xl md:text-5xl font-bold gradient-text mb-3"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                >
                   {achievement.number}
+                </motion.div>
+                <div className="text-gray-600 font-medium group-hover:text-gray-800 transition-colors duration-300">
+                  {achievement.label}
                 </div>
-                <div className="text-gray-600 font-medium">{achievement.label}</div>
               </motion.div>
             ))}
           </div>
@@ -89,12 +112,20 @@ const TestimonialsSection = () => {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 50, rotateX: -15 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.3,
+                  ease: "easeOut"
+                }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="card p-8 text-center group"
+                whileHover={{ 
+                  y: -10, 
+                  rotateX: 5,
+                  transition: { duration: 0.3 }
+                }}
+                className="card-premium p-8 text-center group glow-effect"
               >
                 {/* Rating */}
                 <div className="flex justify-center mb-4">

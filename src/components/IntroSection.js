@@ -50,20 +50,42 @@ const IntroSection = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 50, rotateY: -15 }}
+              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.2,
+                ease: "easeOut"
+              }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="card p-8 text-center group"
+              whileHover={{ 
+                y: -10, 
+                rotateY: 5,
+                transition: { duration: 0.3 }
+              }}
+              className="card-premium p-8 text-center group glow-effect"
             >
-              <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-12 h-12 text-primary-600 mx-auto" />
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-dark mb-3">
+              <motion.div 
+                className="mb-6 relative"
+                whileHover={{ 
+                  scale: 1.2, 
+                  rotate: 360,
+                  transition: { duration: 0.6 }
+                }}
+              >
+                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 transition-all duration-500">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute -inset-2 border-2 border-dashed border-primary-300/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                />
+              </motion.div>
+              <h3 className="text-xl font-bold text-neutral-dark mb-4 group-hover:text-primary-600 transition-colors duration-300">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                 {feature.description}
               </p>
             </motion.div>

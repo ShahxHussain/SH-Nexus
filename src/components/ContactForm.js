@@ -113,15 +113,23 @@ const ContactForm = () => {
     >
       {submitStatus === 'success' && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
+          initial={{ opacity: 0, y: -20, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mb-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-lg"
         >
           <div className="flex items-center">
-            <span className="text-green-500 text-xl mr-3">✓</span>
+            <motion.div
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 shadow-lg"
+            >
+              <span className="text-white text-xl">✓</span>
+            </motion.div>
             <div>
-              <h3 className="text-green-800 font-semibold">Message Sent Successfully!</h3>
-              <p className="text-green-600 text-sm">We'll get back to you within 24 hours.</p>
+              <h3 className="text-green-800 font-bold text-lg">Message Sent Successfully!</h3>
+              <p className="text-green-600">We'll get back to you within 24 hours.</p>
             </div>
           </div>
         </motion.div>
@@ -282,10 +290,10 @@ const ContactForm = () => {
           disabled={isSubmitting}
           whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
           whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-          className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${
+          className={`w-full py-5 px-8 rounded-xl font-bold text-white transition-all duration-500 relative overflow-hidden group ${
             isSubmitting
               ? 'bg-gray-400 cursor-not-allowed'
-              : 'bg-gradient-primary hover:shadow-lg'
+              : 'btn-primary shadow-2xl shadow-primary-500/30'
           }`}
         >
           {isSubmitting ? (
