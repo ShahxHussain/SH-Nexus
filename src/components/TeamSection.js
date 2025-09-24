@@ -56,10 +56,24 @@ const TeamSection = ({ title, subtitle, members, type, bgColor = 'bg-gray-50' })
               <div className="relative mb-6">
                 <div className={`${
                   type === 'founders' ? 'w-32 h-32' : 'w-24 h-24'
-                } bg-gradient-primary rounded-full flex items-center justify-center mx-auto`}>
-                  <span className="text-white font-bold text-2xl">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                } rounded-full overflow-hidden mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300`}>
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to initials if image fails to load
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className={`${
+                    type === 'founders' ? 'w-32 h-32' : 'w-24 h-24'
+                  } bg-gradient-primary rounded-full flex items-center justify-center mx-auto absolute inset-0 hidden`}>
+                    <span className="text-white font-bold text-2xl">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
                 </div>
                 
                 {/* Social Links for Founders and Lead Ambassadors */}

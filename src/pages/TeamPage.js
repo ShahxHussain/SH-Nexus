@@ -1,28 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import TeamSection from '../components/TeamSection';
+import { teamImages } from '../assets/images';
+
 
 const TeamPage = () => {
   const coFounders = [
     {
-      name: 'Sarah Hassan',
-      role: 'Co-Founder & CEO',
-      bio: 'Former AI researcher at Google with 10+ years in machine learning and educational technology.',
-      image: '/images/team/co-founders/sarah-hassan.jpg',
+      name: 'Syed Shah Hussain Badshah',
+      role: 'Founder',
+      bio: 'Specialized in AI, GenAI Engineering. Experienced in international hackathons with a strong focus on creating innovative and impactful tech solutions.',
+      image: teamImages.coFounders.shahHussain, // Update with actual image when available
       linkedin: '#',
       twitter: '#',
-      email: 'sarah@shnexus.com',
-      expertise: ['AI Strategy', 'EdTech', 'Leadership']
+      email: 'shahhussain19288@gmail.com',
+      expertise: ['AI Strategy', 'AI Engineering', 'EdTech', 'Leadership']
     },
     {
-      name: 'Hassan Ahmed',
-      role: 'Co-Founder & CTO',
+      name: 'Soman Ahmad',
+      role: 'Founder',
       bio: 'Ex-Microsoft engineer specializing in scalable AI systems and educational platforms.',
-      image: '/images/team/co-founders/hassan-ahmed.jpg',
+      image: teamImages.coFounders.somanAhmad,
       linkedin: '#',
       twitter: '#',
-      email: 'hassan@shnexus.com',
-      expertise: ['System Architecture', 'AI Engineering', 'Product Development']
+      email: 'somanahmad@shnexus.com',
+      expertise: ['Software Engineer','Management Executive', 'Leadership']
     }
   ];
 
@@ -31,7 +33,7 @@ const TeamPage = () => {
       name: 'Dr. Emily Chen',
       role: 'Lead Ambassador - North America',
       bio: 'PhD in Computer Science from Stanford, leading AI education initiatives across universities.',
-      image: '/images/team/lead-ambassadors/emily-chen.jpg',
+      image: teamImages.leadAmbassadors.emilychen,
       linkedin: '#',
       university: 'Stanford University',
       expertise: ['Academic Partnerships', 'Curriculum Development']
@@ -40,7 +42,7 @@ const TeamPage = () => {
       name: 'Prof. Michael Rodriguez',
       role: 'Lead Ambassador - Europe',
       bio: 'Professor of AI Ethics at Oxford, championing responsible AI education globally.',
-      image: '/images/team/lead-ambassadors/michael-rodriguez.jpg',
+      image: teamImages.leadAmbassadors.michaelRodriguez,
       linkedin: '#',
       university: 'Oxford University',
       expertise: ['AI Ethics', 'Research Collaboration']
@@ -49,7 +51,7 @@ const TeamPage = () => {
       name: 'Dr. Priya Sharma',
       role: 'Lead Ambassador - Asia Pacific',
       bio: 'Former head of AI research at IIT Delhi, expanding AI education across Asia.',
-      image: '/images/team/lead-ambassadors/priya-sharma.jpg',
+      image: teamImages.leadAmbassadors.priyaSharma,
       linkedin: '#',
       university: 'IIT Delhi',
       expertise: ['Research Leadership', 'Regional Expansion']
@@ -57,16 +59,16 @@ const TeamPage = () => {
   ];
 
   const universityAmbassadors = [
-    { name: 'Alex Thompson', university: 'MIT', role: 'Student Ambassador', image: '/images/team/university-ambassadors/alex-thompson.jpg' },
-    { name: 'Maria Gonzalez', university: 'Harvard', role: 'Student Ambassador', image: '/images/team/university-ambassadors/maria-gonzalez.jpg' },
-    { name: 'David Kim', university: 'UC Berkeley', role: 'Student Ambassador', image: '/images/team/university-ambassadors/david-kim.jpg' },
-    { name: 'Sophie Wilson', university: 'Cambridge', role: 'Student Ambassador', image: '/images/team/university-ambassadors/sophie-wilson.jpg' },
-    { name: 'Raj Patel', university: 'IIT Bombay', role: 'Student Ambassador', image: '/images/team/university-ambassadors/raj-patel.jpg' },
-    { name: 'Emma Johnson', university: 'ETH Zurich', role: 'Student Ambassador', image: '/images/team/university-ambassadors/emma-johnson.jpg' },
-    { name: 'Carlos Silva', university: 'University of São Paulo', role: 'Student Ambassador', image: '/images/team/university-ambassadors/carlos-silva.jpg' },
-    { name: 'Yuki Tanaka', university: 'University of Tokyo', role: 'Student Ambassador', image: '/images/team/university-ambassadors/yuki-tanaka.jpg' },
-    { name: 'Lisa Anderson', university: 'Carnegie Mellon', role: 'Student Ambassador', image: '/images/team/university-ambassadors/lisa-anderson.jpg' },
-    { name: 'Ahmed Hassan', university: 'American University of Cairo', role: 'Student Ambassador', image: '/images/team/university-ambassadors/ahmed-hassan.jpg' }
+    { name: 'Alex Thompson', university: 'MIT', role: 'Student Ambassador', image: teamImages.universityAmbassadors.alexThompson },
+    { name: 'Maria Gonzalez', university: 'Harvard', role: 'Student Ambassador', image: teamImages.universityAmbassadors.mariaGonzalez },
+    { name: 'David Kim', university: 'UC Berkeley', role: 'Student Ambassador', image: teamImages.universityAmbassadors.davidKim },
+    { name: 'Sophie Wilson', university: 'Cambridge', role: 'Student Ambassador', image: teamImages.universityAmbassadors.sophieWilson },
+    { name: 'Raj Patel', university: 'IIT Bombay', role: 'Student Ambassador', image: teamImages.universityAmbassadors.rajPatel },
+    { name: 'Emma Johnson', university: 'ETH Zurich', role: 'Student Ambassador', image: teamImages.universityAmbassadors.emmaJohnson },
+    { name: 'Carlos Silva', university: 'University of São Paulo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.carlosSilva },
+    { name: 'Yuki Tanaka', university: 'University of Tokyo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.yukiTanaka },
+    { name: 'Lisa Anderson', university: 'Carnegie Mellon', role: 'Student Ambassador', image: teamImages.universityAmbassadors.lisaAnderson },
+    { name: 'Ahmed Hassan', university: 'American University of Cairo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.ahmedHassan }
   ];
 
   const coreTeam = [
@@ -74,28 +76,28 @@ const TeamPage = () => {
       name: 'Dr. James Wilson',
       role: 'Head of Curriculum',
       bio: 'Former professor at Carnegie Mellon, designing world-class AI curricula.',
-      image: '/images/team/core-team/james-wilson.jpg',
+      image: teamImages.coreTeam.jamesWilson,
       expertise: ['Curriculum Design', 'AI Education']
     },
     {
       name: 'Lisa Thompson',
       role: 'Head of Student Success',
       bio: 'Educational psychologist ensuring optimal learning outcomes for all students.',
-      image: '/images/team/core-team/lisa-thompson.jpg',
+      image: teamImages.coreTeam.lisaThompson,
       expertise: ['Student Support', 'Learning Analytics']
     },
     {
       name: 'Robert Kim',
       role: 'Lead AI Engineer',
       bio: 'Building the next generation of AI-powered educational tools and platforms.',
-      image: '/images/team/core-team/robert-kim.jpg',
+      image: teamImages.coreTeam.robertKim,
       expertise: ['AI Development', 'Platform Engineering']
     },
     {
       name: 'Anna Kowalski',
       role: 'Head of Marketing',
       bio: 'Growth marketing expert with a passion for democratizing AI education.',
-      image: '/images/team/core-team/anna-kowalski.jpg',
+      image: teamImages.coreTeam.annaKowalski,
       expertise: ['Growth Marketing', 'Community Building']
     }
   ];
@@ -123,7 +125,7 @@ const TeamPage = () => {
 
       {/* Co-Founders */}
       <TeamSection
-        title="Co-Founders"
+        title="Founders"
         subtitle="Visionary leaders driving the future of AI education"
         members={coFounders}
         type="founders"
