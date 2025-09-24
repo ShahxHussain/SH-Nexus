@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SH Nexus",
+  "name": "SH Nexus - AI Education Platform",
+  "description": "Empowering the future of AI education through innovative learning methodologies",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,9 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2563eb",
+  "background_color": "#f9fafb",
+  "categories": ["education", "technology", "artificial-intelligence"],
+  "lang": "en",
+  "orientation": "portrait-primary"
 }
