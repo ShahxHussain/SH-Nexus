@@ -19,7 +19,7 @@ const TeamPage = () => {
     {
       name: 'Soman Ahmad',
       role: 'Founder',
-      bio: 'A Software Engineer with a keen focus on Management, planning and Leadership',
+      bio: 'A Software Engineer with a keen focus in Mobile App Development, Planning and Leadership',
       image: teamImages.coFounders.somanAhmad,
       linkedin: '#',
       twitter: '#',
@@ -59,8 +59,9 @@ const TeamPage = () => {
   ];
 
   const universityAmbassadors = [
-    { name: 'Rabia Asif', university: 'University of the Punjab Lahore', role: 'Student Ambassador', image: teamImages.universityAmbassadors.alexThompson },
+    { name: 'Natasha Khanum', university: 'University of Lahore', role: 'Student Ambassador', image: teamImages.universityAmbassadors.alexThompson },
     { name: 'Muhammad Umer', university: 'GIKI', role: 'Student Ambassador', image: teamImages.universityAmbassadors.mariaGonzalez },
+    { name: 'Hamid', university: 'AUST', role: 'Student Ambassador', image: teamImages.universityAmbassadors.mariaGonzalez },
     { name: 'Eman  Rana', university: 'NUST', role: 'Student Ambassador', image: teamImages.universityAmbassadors.davidKim },
     { name: 'Aleeza Naseer', university: 'COMSATS, Abbottabad Campus', role: 'Student Ambassador', image: teamImages.universityAmbassadors.sophieWilson },
     { name: 'Ariyan Marwat', university: 'IMSceinces Peshawar', role: 'Student Ambassador', image: teamImages.universityAmbassadors.rajPatel },

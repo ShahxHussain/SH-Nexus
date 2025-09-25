@@ -1,6 +1,10 @@
 // Team Images Configuration
 // Import local images properly for React
 
+// Import system images
+import logoImg from './system/logo.png';
+import logo1Img from './system/logo1.png'
+
 // Import Shah Hussain's actual image
 import shahHussainImg from './team/co-founders/shah-hussain.jpg';
 import somanAhmadImg from './team/co-founders/soman-ahmad.jpeg'
@@ -43,6 +47,12 @@ export const teamImages = {
 
     // Placeholder
     placeholder: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face&auto=format&q=80',
+};
+
+// System images
+export const systemImages = {
+    logo: logoImg,
+    logo1: logo1Img
 };
 
 export default teamImages;

@@ -18,12 +18,12 @@ const FeaturedCourse = () => {
       '2024 – NASA Honorable Mention',
       '5x Int\'l AI Hackathons Winner'
     ],
-    students: 1250,
+    students: 'N/A',
     rating: 4.9,
     status: 'Launched',
     mentored: [
       'AI, GenAI Basics to Advance',
-      'LLMs Understandings',
+      'LLMs & NLP Understandings',
       'LangChain Framework Mastery',
       'Weekly Projects',
       'Guidance on Applying Concepts in Real-World Projects'
@@ -165,8 +165,8 @@ const FeaturedCourse = () => {
                 <div className="flex items-center mb-6">
                   <div className="flex mr-2">
                     {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
+                      <Star
+                        key={i}
                         className={`w-4 h-4 ${i < Math.floor(featuredCourse.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
                       />
                     ))}
@@ -177,7 +177,7 @@ const FeaturedCourse = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
+                  <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLScWm4sACvrF8vMqNnlJPdSyeXzjfpzBtsPJFOtv-DXB7DD3jA/viewform?usp=sharing&ouid=100596094018211637574"
                     target="_blank"
                     rel="noopener noreferrer"

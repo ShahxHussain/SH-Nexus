@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter, Instagram, Youtube, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { systemImages } from '../assets/images';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -55,11 +56,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">SH</span>
-              </div>
-              <span className="text-2xl font-bold text-white">Nexus</span>
+            <Link to="/" className="flex items-center mb-4">
+              <img 
+                src={systemImages.logo1} 
+                alt="SH Nexus Logo" 
+                className="h-14 object-contain"
+              />
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Empowering the next generation through innovative AI education and hybrid learning methodologies.

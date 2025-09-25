@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
@@ -8,46 +7,46 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
-        <motion.div 
-          animate={{ 
+        <motion.div
+          animate={{
             x: [0, 100, 0],
             y: [0, -50, 0],
             scale: [1, 1.2, 1]
           }}
-          transition={{ 
-            duration: 20, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
           }}
           className="absolute top-20 left-10 w-72 h-72 bg-accent-blue/30 rounded-full blur-3xl"
         ></motion.div>
-        <motion.div 
-          animate={{ 
+        <motion.div
+          animate={{
             x: [0, -80, 0],
             y: [0, 60, 0],
             scale: [1, 0.8, 1]
           }}
-          transition={{ 
-            duration: 25, 
-            repeat: Infinity, 
+          transition={{
+            duration: 25,
+            repeat: Infinity,
             ease: "easeInOut",
             delay: 2
           }}
           className="absolute bottom-20 right-10 w-96 h-96 bg-accent-purple/30 rounded-full blur-3xl"
         ></motion.div>
-        <motion.div 
-          animate={{ 
+        <motion.div
+          animate={{
             rotate: [0, 360],
             scale: [1, 1.5, 1]
           }}
-          transition={{ 
-            duration: 30, 
-            repeat: Infinity, 
-            ease: "linear" 
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear"
           }}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/10 rounded-full blur-2xl"
         ></motion.div>
-        
+
         {/* Floating Particles */}
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -86,21 +85,21 @@ const HeroSection = () => {
               >
                 Empowering the
               </motion.span>
-              <motion.span 
+              <motion.span
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="block bg-gradient-to-r from-accent-blue via-white to-accent-purple bg-clip-text text-transparent relative"
               >
-                Future of AI
+                Future of Tech
                 <motion.div
-                  animate={{ 
-                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] 
+                  animate={{
+                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
                   }}
-                  transition={{ 
-                    duration: 3, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
                   }}
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                 />
@@ -114,8 +113,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Join SH Nexus and unlock your potential with cutting-edge AI education, 
-            innovative learning methodologies, and a community of future leaders.
+            Join SH Nexus and unlock your potential with comprehensive tech education,
+            mentored internships, and professional IT software development services.
+            From AI to full-stack development - we're building tomorrow's tech leaders.
           </motion.p>
 
           <motion.div
@@ -150,18 +150,18 @@ const HeroSection = () => {
           >
             <div className="flex justify-center items-center space-x-8 text-white/80">
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent-blue">500+</div>
-                <div className="text-sm">Students</div>
+                <div className="text-3xl font-bold text-accent-blue">50+</div>
+                <div className="text-sm">Early Adopters</div>
               </div>
               <div className="w-px h-12 bg-white/30"></div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent-purple">15+</div>
-                <div className="text-sm">Courses</div>
+                <div className="text-3xl font-bold text-accent-purple">3+</div>
+                <div className="text-sm">Programs</div>
               </div>
               <div className="w-px h-12 bg-white/30"></div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent-blue">98%</div>
-                <div className="text-sm">Success Rate</div>
+                <div className="text-3xl font-bold text-accent-blue">100%</div>
+                <div className="text-sm">Innovation Focus</div>
               </div>
             </div>
           </motion.div>

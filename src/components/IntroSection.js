@@ -15,10 +15,10 @@ const IntroSection = () => {
       description: 'Adaptive learning paths tailored to your unique goals and pace.'
     },
     {
-  icon: Users,
-  title: 'Hybrid Approach',
-  description: 'Mentored Live Sessions + Self-Paced Learning with provided content'
-  },
+      icon: Users,
+      title: 'Hybrid Approach',
+      description: 'Mentored Live Sessions + Self-Paced Learning with provided content'
+    },
 
     {
       icon: Lightbulb,
@@ -41,8 +41,8 @@ const IntroSection = () => {
             Welcome to <span className="gradient-text">SH Nexus</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We're revolutionizing education through innovative AI-powered learning experiences. 
-            Our hybrid methodology combines the best of traditional and modern teaching approaches 
+            We're revolutionizing education through innovative AI-powered learning experiences.
+            Our hybrid methodology combines the best of traditional and modern teaching approaches
             to create an unparalleled educational journey.
           </p>
         </motion.div>
@@ -53,23 +53,23 @@ const IntroSection = () => {
               key={index}
               initial={{ opacity: 0, y: 50, rotateY: -15 }}
               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-              transition={{ 
-                duration: 0.8, 
+              transition={{
+                duration: 0.8,
                 delay: index * 0.2,
                 ease: "easeOut"
               }}
               viewport={{ once: true }}
-              whileHover={{ 
-                y: -10, 
+              whileHover={{
+                y: -10,
                 rotateY: 5,
                 transition: { duration: 0.3 }
               }}
               className="card-premium p-8 text-center group glow-effect"
             >
-              <motion.div 
+              <motion.div
                 className="mb-6 relative"
-                whileHover={{ 
-                  scale: 1.2, 
+                whileHover={{
+                  scale: 1.2,
                   rotate: 360,
                   transition: { duration: 0.6 }
                 }}
