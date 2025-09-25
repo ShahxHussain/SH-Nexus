@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Target, Globe, Lightbulb } from 'lucide-react';
+import { Rocket, Target, Users, Lightbulb } from 'lucide-react';
 
 const IntroSection = () => {
   const features = [
@@ -15,10 +15,11 @@ const IntroSection = () => {
       description: 'Adaptive learning paths tailored to your unique goals and pace.'
     },
     {
-      icon: Globe,
-      title: 'Global Community',
-      description: 'Connect with learners and experts from around the world.'
-    },
+  icon: Users,
+  title: 'Hybrid Approach',
+  description: 'Mentored Live Sessions + Self-Paced Learning with provided content'
+  },
+
     {
       icon: Lightbulb,
       title: 'Practical Skills',

@@ -19,7 +19,7 @@ const TeamPage = () => {
     {
       name: 'Soman Ahmad',
       role: 'Founder',
-      bio: 'Ex-Microsoft engineer specializing in scalable AI systems and educational platforms.',
+      bio: 'A Software Engineer with a keen focus on Management, planning and Leadership',
       image: teamImages.coFounders.somanAhmad,
       linkedin: '#',
       twitter: '#',
@@ -59,16 +59,16 @@ const TeamPage = () => {
   ];
 
   const universityAmbassadors = [
-    { name: 'Alex Thompson', university: 'MIT', role: 'Student Ambassador', image: teamImages.universityAmbassadors.alexThompson },
-    { name: 'Maria Gonzalez', university: 'Harvard', role: 'Student Ambassador', image: teamImages.universityAmbassadors.mariaGonzalez },
-    { name: 'David Kim', university: 'UC Berkeley', role: 'Student Ambassador', image: teamImages.universityAmbassadors.davidKim },
-    { name: 'Sophie Wilson', university: 'Cambridge', role: 'Student Ambassador', image: teamImages.universityAmbassadors.sophieWilson },
-    { name: 'Raj Patel', university: 'IIT Bombay', role: 'Student Ambassador', image: teamImages.universityAmbassadors.rajPatel },
-    { name: 'Emma Johnson', university: 'ETH Zurich', role: 'Student Ambassador', image: teamImages.universityAmbassadors.emmaJohnson },
-    { name: 'Carlos Silva', university: 'University of São Paulo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.carlosSilva },
-    { name: 'Yuki Tanaka', university: 'University of Tokyo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.yukiTanaka },
-    { name: 'Lisa Anderson', university: 'Carnegie Mellon', role: 'Student Ambassador', image: teamImages.universityAmbassadors.lisaAnderson },
-    { name: 'Ahmed Hassan', university: 'American University of Cairo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.ahmedHassan }
+    { name: 'Rabia Asif', university: 'University of the Punjab Lahore', role: 'Student Ambassador', image: teamImages.universityAmbassadors.alexThompson },
+    { name: 'Muhammad Umer', university: 'GIKI', role: 'Student Ambassador', image: teamImages.universityAmbassadors.mariaGonzalez },
+    { name: 'Eman  Rana', university: 'NUST', role: 'Student Ambassador', image: teamImages.universityAmbassadors.davidKim },
+    { name: 'Aleeza Naseer', university: 'COMSATS, Abbottabad Campus', role: 'Student Ambassador', image: teamImages.universityAmbassadors.sophieWilson },
+    { name: 'Ariyan Marwat', university: 'IMSceinces Peshawar', role: 'Student Ambassador', image: teamImages.universityAmbassadors.rajPatel },
+    { name: ' Muhammad Alyan ', university: 'KUST', role: 'Student Ambassador', image: teamImages.universityAmbassadors.emmaJohnson },
+    { name: '0mama zeb', university: 'UET Peshawar', role: 'Student Ambassador', image: teamImages.universityAmbassadors.carlosSilva }
+    // { name: 'Yuki Tanaka', university: 'University of Tokyo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.yukiTanaka },
+    // { name: 'Lisa Anderson', university: 'Carnegie Mellon', role: 'Student Ambassador', image: teamImages.universityAmbassadors.lisaAnderson },
+    // { name: 'Ahmed Hassan', university: 'American University of Cairo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.ahmedHassan }
   ];
 
   const coreTeam = [
@@ -131,14 +131,14 @@ const TeamPage = () => {
         type="founders"
       />
 
-      {/* Lead Ambassadors */}
+      {/* Lead Ambassadors
       <TeamSection
         title="Lead Ambassadors"
         subtitle="Academic leaders expanding our global reach"
         members={leadAmbassadors}
         type="ambassadors"
         bgColor="bg-white"
-      />
+      /> */}
 
       {/* University Ambassadors */}
       <section className="py-16 bg-gray-50">
@@ -154,7 +154,7 @@ const TeamPage = () => {
               University <span className="gradient-text">Ambassadors</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Student leaders representing SH Nexus at top universities worldwide
+              Student leaders representing SH Nexus at top universities
             </p>
           </motion.div>
 
@@ -185,14 +185,14 @@ const TeamPage = () => {
         </div>
       </section>
 
-      {/* Core Team */}
+      {/* Core Team
       <TeamSection
         title="Core Team"
         subtitle="Dedicated professionals making AI education accessible to everyone"
         members={coreTeam}
         type="core"
         bgColor="bg-white"
-      />
+      /> */}
 
       {/* Join Team CTA */}
       <section className="py-16 bg-gradient-secondary text-white">

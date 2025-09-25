@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
 import { Mail, Phone, MapPin, MessageCircle, Linkedin, Twitter, Instagram, Youtube, Github } from 'lucide-react';
@@ -6,42 +5,39 @@ import { Mail, Phone, MapPin, MessageCircle, Linkedin, Twitter, Instagram, Youtu
 const ContactPage = () => {
   const contactMethods = [
     {
-      icon: '📧',
+      icon: Mail,
       title: 'Email Us',
       description: 'Get in touch via email',
-      contact: 'info@shnexus.com',
-      action: 'mailto:info@shnexus.com'
+      contact: 'shnexus@gmail.com',
+      action: 'mailto:shnexus@gmail.com'
     },
     {
-      icon: '📱',
+      icon: Phone,
+      title: 'Call Us',
+      description: 'Direct phone support',
+      contact: '+92 332 7366065',
+      action: 'tel:+923327366065'
+    },
+    {
+      icon: MessageCircle,
       title: 'WhatsApp',
       description: 'Chat with us instantly',
-      contact: '+1 (555) 123-4567',
-      action: 'https://wa.me/15551234567'
+      contact: '+92 332 7366065',
+      action: 'https://wa.me/923327366065'
     },
     {
-      icon: '📍',
+      icon: MapPin,
       title: 'Visit Us',
-      description: 'Our headquarters',
-      contact: 'Innovation Hub, Tech City',
-      action: '#'
-    },
-    {
-      icon: '💬',
-      title: 'Live Chat',
-      description: 'Available 24/7',
-      contact: 'Start a conversation',
+      description: 'Our location',
+      contact: 'Will be revealed soon',
       action: '#'
     }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', url: '#', icon: 'linkedin', color: 'bg-blue-600 hover:bg-blue-700' },
-    { name: 'Twitter', url: '#', icon: 'twitter', color: 'bg-blue-400 hover:bg-blue-500' },
-    { name: 'Instagram', url: '#', icon: 'instagram', color: 'bg-pink-600 hover:bg-pink-700' },
-    { name: 'YouTube', url: '#', icon: 'youtube', color: 'bg-red-600 hover:bg-red-700' },
-    { name: 'Discord', url: '#', icon: 'discord', color: 'bg-indigo-600 hover:bg-indigo-700' },
-    { name: 'GitHub', url: '#', icon: 'github', color: 'bg-gray-800 hover:bg-gray-900' }
+    { name: 'LinkedIn', url: '#', icon: Linkedin, color: 'bg-blue-600 hover:bg-blue-700' },
+    { name: 'WhatsApp Community', url: 'https://wa.me/923327366065', icon: MessageCircle, color: 'bg-green-600 hover:bg-green-700' },
+    { name: 'Discord', url: '#', icon: MessageCircle, color: 'bg-indigo-600 hover:bg-indigo-700' }
   ];
 
   const faqs = [
@@ -57,16 +53,8 @@ const ContactPage = () => {
       question: 'Do you offer certificates upon completion?',
       answer: 'Yes, we provide industry-recognized certificates for all completed courses. These certificates can be shared on LinkedIn and included in your professional portfolio.'
     },
-    {
-      question: 'What is your refund policy?',
-      answer: 'We offer a 30-day money-back guarantee for all courses. If you\'re not satisfied within the first 30 days, you can request a full refund.'
-    },
-    {
-      question: 'Can I access courses on mobile devices?',
-      answer: 'Absolutely! Our platform is fully responsive and optimized for mobile devices. You can learn on-the-go using any smartphone or tablet.'
-    }
-  ];
 
+  ];
   return (
     <div className="pt-20 min-h-screen bg-gray-50">
       {/* Header */}
@@ -116,11 +104,15 @@ const ContactPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="card p-6 text-center group cursor-pointer"
+                className="card-premium p-6 text-center group cursor-pointer"
               >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {method.icon}
-                </div>
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 transition-all duration-500"
+                >
+                  <method.icon className="w-8 h-8 text-white" />
+                </motion.div>
                 <h3 className="text-lg font-semibold text-neutral-dark mb-2">
                   {method.title}
                 </h3>
@@ -189,9 +181,8 @@ const ContactPage = () => {
                     {Array.from({ length: 64 }, (_, i) => (
                       <div
                         key={i}
-                        className={`${
-                          Math.random() > 0.5 ? 'bg-black' : 'bg-white'
-                        } rounded-sm`}
+                        className={`${Math.random() > 0.5 ? 'bg-black' : 'bg-white'
+                          } rounded-sm`}
                       />
                     ))}
                   </div>
@@ -209,12 +200,15 @@ const ContactPage = () => {
                     <motion.a
                       key={index}
                       href={social.url}
-                      whileHover={{ scale: 1.05 }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05, rotate: 360 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`${social.color} text-white p-3 rounded-lg flex items-center justify-center transition-colors duration-300`}
+                      transition={{ duration: 0.3 }}
+                      className={`${social.color} text-white p-3 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl`}
                       aria-label={social.name}
                     >
-                      <SocialIcon icon={social.icon} />
+                      <social.icon className="w-5 h-5" />
                     </motion.a>
                   ))}
                 </div>

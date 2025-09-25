@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Linkedin, Twitter, Instagram, Youtube, Mail, MapPin, Phone } from 'lucide-react';
+import { Linkedin, Twitter, Instagram, Youtube, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     { name: 'LinkedIn', url: '#', icon: 'linkedin' },
-    { name: 'Twitter', url: '#', icon: 'twitter' },
-    { name: 'Instagram', url: '#', icon: 'instagram' },
-    { name: 'YouTube', url: '#', icon: 'youtube' },
+    { name: 'WhatsApp Community', url: 'https://wa.me/923327366065', icon: 'whatsapp' },
+    { name: 'Discord', url: '#', icon: 'discord' },
   ];
 
   const quickLinks = [
@@ -111,15 +110,15 @@ const Footer = () => {
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>info@shnexus.com</span>
+                <span>shnexus@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+92 332 7366065</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>Innovation Hub, Tech City</span>
+                <span>Will be revealed soon</span>
               </div>
             </div>
           </div>
@@ -147,9 +146,8 @@ const Footer = () => {
 const SocialIcon = ({ icon }) => {
   const iconComponents = {
     linkedin: Linkedin,
-    twitter: Twitter,
-    instagram: Instagram,
-    youtube: Youtube,
+    whatsapp: Phone, // Using Phone icon for WhatsApp
+    discord: MessageCircle, // Using MessageCircle for Discord
   };
 
   const IconComponent = iconComponents[icon];

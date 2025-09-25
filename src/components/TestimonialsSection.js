@@ -1,38 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Briefcase, Star, Users } from 'lucide-react';
+import { Lightbulb, BookOpen, Globe, Star, Rocket } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const testimonials = [
-    {
-      name: 'Alex Johnson',
-      role: 'Software Engineer at Google',
-      image: '/api/placeholder/80/80',
-      content: 'SH Nexus transformed my understanding of AI. The practical approach and expert guidance helped me land my dream job at Google.',
-      rating: 5
-    },
-    {
-      name: 'Maria Rodriguez',
-      role: 'Data Scientist at Microsoft',
-      image: '/api/placeholder/80/80',
-      content: 'The hybrid learning methodology is brilliant. I could learn at my own pace while getting real-time feedback from instructors.',
-      rating: 5
-    },
-    {
-      name: 'David Chen',
-      role: 'AI Researcher at Stanford',
-      image: '/api/placeholder/80/80',
-      content: 'Outstanding curriculum and community. The projects I built during the course directly contributed to my research publications.',
-      rating: 5
-    }
+    // {
+    //   name: 'Alex Johnson',
+    //   role: 'Software Engineer at Google',
+    //   image: '/api/placeholder/80/80',
+    //   content: 'SH Nexus transformed my understanding of AI. The practical approach and expert guidance helped me land my dream job at Google.',
+    //   rating: 5
+    // },
+    // {
+    //   name: 'Maria Rodriguez',
+    //   role: 'Data Scientist at Microsoft',
+    //   image: '/api/placeholder/80/80',
+    //   content: 'The hybrid learning methodology is brilliant. I could learn at my own pace while getting real-time feedback from instructors.',
+    //   rating: 5
+    // },
+    // {
+    //   name: 'David Chen',
+    //   role: 'AI Researcher at Stanford',
+    //   image: '/api/placeholder/80/80',
+    //   content: 'Outstanding curriculum and community. The projects I built during the course directly contributed to my research publications.',
+    //   rating: 5
+    // }
   ];
 
-  const achievements = [
-    { number: '500+', label: 'Graduates Placed', icon: GraduationCap },
-    { number: '95%', label: 'Job Placement Rate', icon: Briefcase },
-    { number: '4.9/5', label: 'Average Rating', icon: Star },
-    { number: '50+', label: 'Industry Partners', icon: Users }
-  ];
+const achievements = [
+  { number: '100%', label: 'Focus on Innovation', icon: Lightbulb },
+  { number: '24/7', label: 'Learning & Growth Culture', icon: BookOpen },
+  { number: 'Global', label: 'Collaboration Opportunities', icon: Globe },
+  { number: '∞', label: 'Future Possibilities', icon: Rocket }
+];
+
 
   return (
     <section className="py-20 bg-white">
@@ -101,12 +102,12 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-neutral-dark mb-6">
+          {/* <h2 className="text-4xl md:text-5xl font-bold text-center text-neutral-dark mb-6">
             What Our <span className="gradient-text">Students Say</span>
           </h2>
           <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
             Hear from our successful graduates who are now leading the AI revolution.
-          </p>
+          </p> */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
