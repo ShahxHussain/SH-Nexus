@@ -30,9 +30,8 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isMenuOpen 
-          ? 'bg-green-500/95 backdrop-blur-xl shadow-2xl border-b border-green-400/20'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isMenuOpen
+          ? 'bg-white/95 backdrop-blur-xl shadow-2xl border-b border-white/20'
           : isScrolled
             ? 'bg-white/90 backdrop-blur-xl shadow-2xl shadow-primary-500/10 border-b border-white/20'
             : 'bg-transparent'
