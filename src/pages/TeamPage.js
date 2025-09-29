@@ -59,13 +59,12 @@ const TeamPage = () => {
   ];
 
   const universityAmbassadors = [
-    { name: 'Natasha Khanum', university: 'University of Lahore', role: 'Student Ambassador', image: teamImages.universityAmbassadors.alexThompson },
     { name: 'Muhammad Umer', university: 'GIKI', role: 'Student Ambassador', image: teamImages.universityAmbassadors.mariaGonzalez },
     { name: 'Hamid', university: 'AUST', role: 'Student Ambassador', image: teamImages.universityAmbassadors.mariaGonzalez },
     { name: 'Eman  Rana', university: 'NUST', role: 'Student Ambassador', image: teamImages.universityAmbassadors.davidKim },
     { name: 'Aleeza Naseer', university: 'COMSATS, Abbottabad Campus', role: 'Student Ambassador', image: teamImages.universityAmbassadors.sophieWilson },
     { name: 'Ariyan Marwat', university: 'IMSceinces Peshawar', role: 'Student Ambassador', image: teamImages.universityAmbassadors.rajPatel },
-    { name: ' Muhammad Alyan ', university: 'KUST', role: 'Student Ambassador', image: teamImages.universityAmbassadors.emmaJohnson },
+    { name: 'Mohid Ayaz', university: 'KUST', role: 'Student Ambassador', image: teamImages.universityAmbassadors.emmaJohnson },
     { name: '0mama zeb', university: 'UET Peshawar', role: 'Student Ambassador', image: teamImages.universityAmbassadors.carlosSilva }
     // { name: 'Yuki Tanaka', university: 'University of Tokyo', role: 'Student Ambassador', image: teamImages.universityAmbassadors.yukiTanaka },
     // { name: 'Lisa Anderson', university: 'Carnegie Mellon', role: 'Student Ambassador', image: teamImages.universityAmbassadors.lisaAnderson },

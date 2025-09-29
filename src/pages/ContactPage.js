@@ -35,7 +35,7 @@ const ContactPage = () => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', url: '#', icon: Linkedin, color: 'bg-blue-600 hover:bg-blue-700' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/sh-nexus', icon: Linkedin, color: 'bg-blue-600 hover:bg-blue-700' },
     { name: 'WhatsApp Community', url: 'https://wa.me/923327366065', icon: MessageCircle, color: 'bg-green-600 hover:bg-green-700' },
     { name: 'Discord', url: '#', icon: MessageCircle, color: 'bg-indigo-600 hover:bg-indigo-700' }
   ];

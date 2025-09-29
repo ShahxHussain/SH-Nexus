@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'LinkedIn', url: '#', icon: 'linkedin' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/sh-nexus', icon: 'linkedin' },
     { name: 'WhatsApp Community', url: 'https://wa.me/923327366065', icon: 'whatsapp' },
     { name: 'Discord', url: '#', icon: 'discord' },
   ];
