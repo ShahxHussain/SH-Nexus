@@ -12,8 +12,8 @@ const CoursesPage = () => {
       description: 'What you\'ll learn: GenAI • LLMs • LangChain Framework Mastery',
       duration: '30 Days',
       level: 'Beginner',
-      instructor: 'N/A',
-      students: 1250,
+      instructor: 'Syed Shah Hussain Badshah',
+      students: 'Counting...',
       rating: 4.9,
       status: 'Launched',
       price: 'PKR 2000',
@@ -22,7 +22,7 @@ const CoursesPage = () => {
     },
     {
       id: 2,
-      title: 'React Course',
+      title: 'Master Frontend Development: React',
       description: 'Build modern, interactive web applications with React.js and master component-based development.',
       duration: '10 weeks',
       level: 'Intermediate',
@@ -36,7 +36,7 @@ const CoursesPage = () => {
     },
     {
       id: 3,
-      title: 'Node.js Backend',
+      title: 'Learn Robust Backend using Node.js',
       description: 'Master server-side development with Node.js, Express, and database integration.',
       duration: '12 weeks',
       level: 'Intermediate',
