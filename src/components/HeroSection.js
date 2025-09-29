@@ -129,7 +129,7 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Link to="/courses" className="btn-primary text-lg px-10 py-5 shadow-2xl shadow-primary-500/30">
-                <span className="relative z-10">Explore Courses</span>
+                <span className="relative z-10">Explore Programs</span>
               </Link>
             </motion.div>
             <motion.div
