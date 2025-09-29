@@ -49,7 +49,7 @@ const FeaturedCourse = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-dark mb-6">
-            Featured <span className="gradient-text">Course</span>
+            Featured <span className="gradient-text">Program</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Dive deep into our most popular course and start your AI journey today.
@@ -72,7 +72,7 @@ const FeaturedCourse = () => {
                     <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl">🤖</span>
                     </div>
-                    <h3 className="text-2xl font-bold">AI & ML</h3>
+                    <h3 className="text-2xl font-bold">AI FusionL</h3>
                     <p className="text-white/80">Interactive Learning</p>
                   </div>
                 </div>
